@@ -4,7 +4,7 @@
  padding: 0px;
 }
 #wrapper{
- width: 950px;
+ max-width: 1024px;
  background-color: silver;
  margin: 0px auto;
  padding: 15px;
@@ -12,34 +12,66 @@
 #header{
  height: 150px;
  background-color: green;
+ margin: 0;
 }
 #navigation{
  height: 300px;
- width: 200px;
+ width: 20%;
  background-color: blue;
  display: inline-block;
  margin-top: 15px;
+ margin-right: 15px;
  vertical-align: top;
 }
 #main_content{
- height: 400px;
- width: 700px;
+ width: calc(80% - 49px);
  background-color: red;
  display: inline-block;
- margin: 15px 0 0 15px;
+ margin-top: 15px;
  padding: 15px;
 }
 .subcontents{
  height: 200px;
- width: 210px;
+ width: 31%;
  background-color: yellow;
  display: inline-block;
- margin-right: 10px;
- margin-bottom: 15px;
+ margin: 10px 7px;
 }
 #advertisement{
  height: 120px;
- width: 660px;
  background-color: purple;
- margin-top: 15px;
+ margin: 15px 0 15px;
 }
+
+@media screen and (max-width: 1023px) {
+	#navigation {
+		display: none;
+	}
+
+	#main_content {
+		width: 100%;
+		display: block;
+		padding: 0 0 15px 0;
+	}
+
+	.subcontents {
+		width: calc((100% / 2) - 32px);
+		margin: 15px;
+	}
+
+	#advertisement {
+		margin: 15px 15px 0 15px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.subcontents {
+		width: calc(100% - 30px);
+	}
+}
+
+
+
+
+
+
